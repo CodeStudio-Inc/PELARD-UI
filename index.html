@@ -1,197 +1,83 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    
 <head>
-    
-    <title>Becky Designs</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description" content="A web gallery with Beckys Work">
-    <meta name="keywords" content="Photography, Graphics Design, Rebecca, Nassanga, Kafeero, Gallery, Design School,rekafeero">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-   
-    <!-- Compiled and minified CSS -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
- <!-- Google Fonts -->
- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
- 
- <!--Import Google Icon Font-->
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-<Style>
-main{
-    margin-top: 125px;
-}
-    header, main, footer {
-        padding-left: 300px;
-      }
-  
-      @media only screen and (max-width : 992px) {
-        header, main, footer {
-          padding-left: 0;
-        }
-      }
-      .red {
-        background: url('http://www.tradeinterint.com/wp-content/uploads/2017/03/industrial-servicee-1.jpg'); 
-         background-repeat: no-repeat;
-         background-size: cover;
-       
-       }
-       
-</Style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pelard-MDR</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	  
 </head>
+<body>
+ 
+<div class="container containers" id="containers">
+	<div class="col s12 m6 form-containers sign-up-containers">
+	
+		<form action="#">
+			<h3>Create Account</h3>
+			<div class="social-containerss">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fa fa-google" aria-hidden="true"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Sign Up</button>
+		</form>
+	</div>
 
-<body data-gr-c-s-loaded="true">
-    <!-- START HEADER -->
-    <header id="header" class="page-topbar">
-        <!-- start header nav-->
-        <div >
-            <nav>
-                <div class="nav-wrapper">
-                  <a href="#" class="brand-logo right">Logo</a>
-                  <ul id="nav-mobile" class="left hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
-                  </ul>
-                </div>
-              </nav>
-        </div>
-        <!-- end header nav-->
-      </header>
-      <!-- END HEADER -->
-      <!-- //////////////////////////////////////////////////////////////////////////// -->
-   
-    <!-- BEGIN: SideNav-->
-    <div class="wrapper">
-    <!-- START LEFT SIDEBAR NAV-->
-    <aside id="left-sidebar-nav">
-        <ul id="slide-out" class="sidenav sidenav-fixed">
-          <li class="user-details cyan darken-2">
-            <div class="row">
-              <div class="col col s4 m4 l4">
-                <img src="images/avatar/avatar-7.png" alt="" class="circle responsive-img valign profile-image cyan">
-              </div>
-              <div class="col col s8 m8 l8">
-                <ul id="profile-dropdown-nav" class="dropdown-content">
-                  <li>
-                    <a href="#" class="grey-text text-darken-1">
-                      <i class="material-icons">face</i> Profile</a>
-                  </li>
-                  <li>
-                    <a href="#" class="grey-text text-darken-1">
-                      <i class="material-icons">settings</i> Settings</a>
-                  </li>
-                  <li>
-                    <a href="#" class="grey-text text-darken-1">
-                      <i class="material-icons">live_help</i> Help</a>
-                  </li>
-                  <li class="divider"></li>
-                  <li>
-                    <a href="#" class="grey-text text-darken-1">
-                      <i class="material-icons">lock_outline</i> Lock</a>
-                  </li>
-                  <li>
-                    <a href="#" class="grey-text text-darken-1">
-                      <i class="material-icons">keyboard_tab</i> Logout</a>
-                  </li>
-                </ul>
-                <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown-nav">John Doe<i class="mdi-navigation-arrow-drop-down right"></i></a>
-                <p class="user-roal">Administrator</p>
-              </div>
-            </div>
-          </li>
-          <li class="no-padding">
-            <ul class="collapsible" data-collapsible="accordion">
-                <h6>Record A New Case Here</h6>
-              <li class="bold">
-                <a href="index.html" class="waves-effect waves-cyan">
-                    <i class="material-icons">pie_chart_outlined</i>
-                    <span class="nav-text">Reporters Information</span>
-                  </a>
-              </li>
-              <li class="bold">
-                <a href="cards-basic.html" class="waves-effect waves-cyan">
-                    <i class="material-icons">cast</i>
-                    <span class="nav-text">Violation Details</span>
-                  </a>
-              </li>
-              <li class="bold">
-                <a href="ui-basic-buttons.html" class="waves-effect waves-cyan">
-                    <i class="material-icons">insert_link</i>
-                    <span class="nav-text">Image and Video Evidence</span>
-                  </a>
-             
-                  
-              
-              
-                <a class="btn waves-effect waves-light gradient-45deg-red-pink" href="login.html" target="_blank">
-                  <i class="material-icons white-text">file_upload</i>Log Out
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only">
-          <i class="material-icons">menu</i>
-        </a>
-      </aside>
-      <!-- END LEFT SIDEBAR NAV-->
-    </div>
-      <!-- //////////////////////////////////////////////////////////////////////////// -->
+	<div class="form-containers sign-in-containers">
+		<form action="#">
+			<h3>Sign in</h3>
+			<div class="social-containers">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fa fa-google" aria-hidden="true"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button>Sign In</button>
+		</form>
+	</div>
 
-    <!-- //////////////////////////////////////////////////////////////////////////// -->
-    <!-- START MAIN -->
-     <div class="container">
-    <main>
-       
-    <div class="card-image">
-    <div class="carousel carousel-slider left" data-indicators="true">
-        <div class="carousel-fixed-item center">
-          
-          <a class="btn waves-effect white grey-text darken-text-2">button</a>
-        </div>
-        <div class="carousel-item red white-text" href="#one!">
-          
-          <h2>First Panel</h2>
-    
-          <p class="white-text">This is your first panel</p>
-        </div>
-    
-        <div class="carousel-item amber white-text" href="#two!">
-          <h2>Second Panel</h2>
-          <p class="white-text">This is your second panel</p>
-        </div>
-        <div class="carousel-item green white-text" href="#three!">
-          <h2>Third Panel</h2>
-          <p class="white-text">This is your third panel</p>
-        </div>
-        <div class="carousel-item blue white-text" href="#four!">
-          <h2>Fourth Panel</h2>
-          <p class="white-text">This is your fourth panel</p>
-        </div>
-      </div>
-                 </div>   
-    
-                            </main>                 
-                        </div>
-                    <!--MAIN END-->            
-    
-<!-- Compiled and minified JavaScript -->
-<script src="https://code.jquery.com/jquery-3.5.0.slim.min.js" integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
-    $(document).ready(function(){
-       
-        $('.sidenav').sidenav();
-        $('.carousel-slider').carousel({fullWidth: true, padding:0},setTimeout(autoplay, 4500));
-        function autoplay() {
-          $('.carousel').carousel('next');
-          setTimeout(autoplay, 7500);
-           }
-      
-      });
-    </script>
+	<div class="overlay-containers">
+		<div class="overlay">
+
+			<div class="overlay-panel overlay-left">
+				<h2>PELARD-N</h2>
+				<p>Protection and Empowerment of Land Rights Defenders in Northern Uganda</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+
+			<div class="overlay-panel overlay-right">
+				<h3>PELARD-N</h3>
+				<p>Protection and Empowerment of Land Rights Defenders in Northern Uganda</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<br><br><br><br>
+<footer>
+	<p>
+		Created with <i class="fa fa-heart"></i> by
+		<a target="_blank" href="https://soleterre.org/">soleterre Foundation</a>
+	</p>
+</footer>
+
+<script src="https://kit.fontawesome.com/c6a2844655.js" crossorigin="anonymous"></script>
+  <script src="./js/signInUp.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	
 </body>
 </html>

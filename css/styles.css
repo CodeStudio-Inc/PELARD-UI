@@ -16,15 +16,6 @@ body {
 	margin: -20px 0 50px;
 }
 
-h1 {
-	font-weight: bold;
-	margin: 0;
-}
-
-h2 {
-	text-align: center;
-}
-
 p {
 	font-size: 14px;
 	font-weight: 100;
@@ -89,7 +80,7 @@ input {
 	width: 100%;
 }
 
-.container {
+.containers {
 	background-color: #fff;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
@@ -101,31 +92,31 @@ input {
 	min-height: 480px;
 }
 
-.form-container {
+.form-containers {
 	position: absolute;
 	top: 0;
 	height: 100%;
 	transition: all 0.6s ease-in-out;
 }
 
-.sign-in-container {
+.sign-in-containers {
 	left: 0;
 	width: 50%;
 	z-index: 2;
 }
 
-.container.right-panel-active .sign-in-container {
+.containers.right-panel-active .sign-in-containers {
 	transform: translateX(100%);
 }
 
-.sign-up-container {
+.sign-up-containers {
 	left: 0;
 	width: 50%;
 	opacity: 0;
 	z-index: 1;
 }
 
-.container.right-panel-active .sign-up-container {
+.containers.right-panel-active .sign-up-containers {
 	transform: translateX(100%);
 	opacity: 1;
 	z-index: 5;
@@ -144,7 +135,7 @@ input {
 	}
 }
 
-.overlay-container {
+.overlay-containers {
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -155,14 +146,14 @@ input {
 	z-index: 100;
 }
 
-.container.right-panel-active .overlay-container{
+.containers.right-panel-active .overlay-containers{
 	transform: translateX(-100%);
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: grey;
+	background: -webkit-linear-gradient(to right, orange, grey);
+	background: linear-gradient(to right, orange, grey);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -175,7 +166,7 @@ input {
 	transition: transform 0.6s ease-in-out;
 }
 
-.container.right-panel-active .overlay {
+.containers.right-panel-active .overlay {
   	transform: translateX(50%);
 }
 
@@ -198,7 +189,7 @@ input {
 	transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay-left {
+.containers.right-panel-active .overlay-left {
 	transform: translateX(0);
 }
 
@@ -207,15 +198,15 @@ input {
 	transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right {
+.containers.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
 
-.social-container {
+.social-containers {
 	margin: 20px 0;
 }
 
-.social-container a {
+.social-containers a {
 	border: 1px solid #DDDDDD;
 	border-radius: 50%;
 	display: inline-flex;
