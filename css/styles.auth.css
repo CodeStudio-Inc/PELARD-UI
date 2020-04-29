@@ -1,0 +1,233 @@
+:root {
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --DarkBlue: hsl(249, 10%, 26%);
+    --GrayishBlue: hsl(246, 25%, 77%);
+  }
+  
+  @import url("https://fonts.google.com/specimen/Poppins");
+  
+  body {
+    background-color: var(--Red);
+    background-image: url(../images/bg-intro-mobile.png);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  legend{
+    display: none;
+  }
+  
+  .text {
+    color: rgb(240, 240, 240);
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    line-height: 1.6;
+  
+  }
+  
+  .strong-text {
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  
+  .article-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 800px;
+    min-width: 360px;
+    padding: 80px 30px;
+  }
+  
+  .article-content__notice-container {
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .notice-container__title {
+    font-size: 2.04em;
+    line-height: 1.3;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .article-content__form-section {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .form-section__header {
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 9px 2px rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    background-color: var(--Blue);
+    height: 100px;
+    line-height: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .form-section__header .text {
+    font-weight: 300;
+  }
+  
+  .form-section__form-container {
+    background-color: white;
+    box-shadow: 0px 9px 2px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    width: 100%;
+    padding: 25px;
+  }
+  
+  .form-section__form-container fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .input-box {
+    width: 100%;
+  }
+  
+  .input-box:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: none;
+    font-size: 1.04em;
+    font-weight: 600;
+    border-color: var(--GrayishBlue);
+    text-indent: 20px;
+    min-height: 60px;
+    width: 100%;
+  }
+  
+  .input:invalid {
+    background-image: url(../images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 90%;
+    border: 3px solid var(--Red);
+  }
+  
+  .input::-webkit-validation-bubble {
+    display: none;
+  }
+  
+  .input:invalid+.input-invalid-message {
+    display: block;
+  }
+  
+  .input-invalid-message {
+    font-size: .8em;
+    display: none;
+    color: var(--Red);
+    line-height: 30px;
+    height: 20px;
+    font-weight: 500;
+    font-style: italic;
+    text-indent: 5px;
+  }
+  
+  .input::placeholder {
+    color: rgba(0,0,0,.7);
+  }
+  
+  .input__submit-button {
+    background-color: var(--Green);
+    border-radius: 5px;
+    box-shadow: 0px -5px 2px rgba(0, 0, 0, .2) inset;
+    border: none;
+    color: white;
+    font-weight: 600;
+    min-height: 60px;
+    font-size: 1.05em;
+  }
+  
+  .form__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form__footer .text {
+    color: var(--GrayishBlue);
+    font-size: .9em;
+    font-weight: 500;
+  }
+  
+  .form__footer .strong-text {
+    font-weight: 600;
+    font-size: .8em;
+    color: var(--Red);
+  }
+  
+  @media screen and (min-width:480px) {
+    br {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width:600px) {
+  
+    .input,
+    .input__submit-button {
+      height: 80px;
+    }
+  }
+  
+  @media screen and (min-width:1280px) {
+    .text {
+      text-align: left;
+    }
+  
+    .input,
+    .input__submit-button {
+      height: 25%;
+    }
+  
+    .article-content {
+      flex-direction: row;
+      justify-content: space-around;
+      max-height: 800px;
+      max-width: 1444px;
+    }
+  
+    .article-content__notice-container {
+      width: 40%;
+    }
+  
+    .notice-container__title {
+      font-size: 3.5em;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+  
+    .article-content__form-section {
+      width: 40%;
+      align-content: center;
+    }
+  
+    .form-section__header {
+      height: 60px;
+    }
+  
+    .input-invalid-message {
+      text-align: right;
+    }
+  
+  }

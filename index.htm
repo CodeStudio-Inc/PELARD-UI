@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normalize.auth.css">
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <link rel="stylesheet" href="./css/styles.auth.css">
+  <title>Intro Component With Signup Form</title>
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	  
+</head>
+
+<body>
+  <main class="container main-container" id="main">
+    <article class="article-content">
+      <section class="article-content__notice-container">
+        <h1 class="notice-container__title text">Learn to code by watching
+          others</h1>
+        <p class="notice-container__description text">See how experienced
+          developers solve <br> problems in real time. Watching <br> scripted
+          tutorials is
+          great, but <br> understanding how developers thinks is invaluable.</p>
+      </section>
+      <section class="article-content__form-section">
+        <div class="form-section__header">
+          <p class="text"><strong class="strong-text">Try it for free 7
+              days</strong> then <br> $20/mo. thereafter</p>
+        </div>
+        <form class="form-section__form-container">
+          <fieldset>
+            <legend>Personal Data</legend>
+            <label class="input-box">
+              <input class="input input__email-adress" type="email"
+                placeholder="Email Address" name="email-address" />
+              <div class="input-invalid-message">Look like this is not an email
+              </div>
+            </label>
+            <label class="input-box">
+              <input class="input input__password" type="password"
+                placeholder="Password" name="password" />
+              <div class="input-invalid-message">Password cannot be empty</div>
+            </label>
+            <input class="input__submit-button input-box" type="submit"
+              value="CLAIM YOUR FREE TRIAL" name="submit-button" />
+            <div class="form__footer input-box">
+              <p class="text">By clicking the button, you are agreeing to <br>
+                our <strong class="strong-text"> Terms and Services</strong></p>
+		   <a href="./views/signup.html">Register</a><a href="./views/home.html">Home</a>
+			</div>
+          </fieldset>
+        </form>
+      </section>
+    </article>
+  </main>
+  <script src="./js/scripts.auth.js"></script>
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	
+</body>
+
+</html>
