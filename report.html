@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+    
+    <title>PELARD-N Report</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Monitoring Documentation Reporting">
+    <meta name="keywords" content="Human Rights,Violation,Northern Uganda">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Compiled and minified CSS -->
+ <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+ <!-- Google Fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+ 
+ <!--Import Google Icon Font-->
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link  rel="stylesheet" type="text/css" href="css/auth.css">
+<link  rel="stylesheet" type="text/css" href="css/styles.css">
+<style>
+    header, main, footer {
+        padding-left: 300px;
+      }
+  
+      @media only screen and (max-width : 992px) {
+        header, main, footer {
+          padding-left: 0;
+        }
+      }
+  
+h1{
+    font-family: 'Changa One', cursive;
+   
+
+}
+    .btn {
+        background-color: var(--Blue);
+    }
+    .logos{
+      width:55px;
+      height:50px;
+      
+    }
+    .partners {
+  display: inline;
+}
+</style>
+
+</head>
+
+<body>
+
+    <nav> <!-- navbar content here  --> </nav>
+
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+
+      <li><div class="user-view">
+        <div class="background">
+          <img src="images/EU.png">
+        </div>
+        <a href="#user"><img class="circle" src="images/avatar-9.png"></a>
+        <a href="#name"><span class="white-text name">Adrian Ssali</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      </div></li>
+
+      <li><a href="https://pelard-n.netlify.app/"><i class="material-icons">home</i>Home</a></li>
+      <li><a href="https://pelard-n.netlify.app/"><i class="material-icons">dashboard</i>Dashboard</a></li>
+      <li><a href="settings.html"><i class="material-icons">settings</i>Settings</a></li>
+      
+      
+      <li><div class="divider"></div></li>
+      <li><a class="waves-effect" href="index.html">Logout</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class=" black-text sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+          
+    <!--Side nav End-->     
+<main>         
+    <div id="create" class="home-width">
+        <div class="form-section__header">
+                <h3 class="header center ">
+                <span class="white-text">Reporting New Case</span></h3>
+          </div>
+        <div id="home-started-card-container">
+            <div id="home-started-card" class="">
+                <div class="row">
+                    <h5 class="header center #01579b light-blue-text text-darken-4">1.Reporter's Information</h5>
+                    <div class="col s12 relative">
+                
+                        <label class="input-box">
+                            <input class="input input__first-name" type="text"
+                              placeholder="First Name" name="first-name" />
+                            <div class="input-invalid-message">First Name cannot be empty
+                            </div>
+                          </label>
+
+                          <label class="input-box">
+                            <input class="input input__last-name" type="text"
+                              placeholder="Last Name" name="last-name" />
+                            <div class="input-invalid-message">Last Name cannot be empty</div>
+                          </label>
+                          
+                          <label class="input-box" for="phone">
+                         <input class="input" type="tel" id="phone"
+                         placeholder="Phone Number" name="phone"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                               required>
+                         <small>Format: 7-000-0000</small>
+                          </label>
+                          <label class="input-box">
+                            <input type="text" class="datepicker input" 
+                              placeholder="Date"/>
+                          </label>
+                          <label class="input-box">
+                            <input type="text" class="timepicker input" 
+                              placeholder="Time"/>
+                          </label>
+                         
+                    </div>
+                    
+                    <h5 class="header center #01579b light-blue-text text-darken-4">2.Violation Details</h5>
+                    <br> <br>
+                    <div class="col s12 relative">
+
+                        <label class="input-box">
+                            <select multiple>
+                                <option value="" disabled selected>Type Of Violation</option>
+                                <option value="1">Assault</option>
+                                <option value="2">Domestic Violance</option>
+                                <option value="3">Attempted Murder</option>
+                                <option value="4">Destruction Of Property</option>
+                                <option value="5">Harrassment</option>
+                                <option value="6">Intimidation</option>
+                              </select>
+                          </label>
+                  
+                        
+                          <label class=" input-box input-field">
+                            <textarea placeholder="Discription Of Violation" id="textarea1" class="materialize-textarea"></textarea>
+                          </label>
+                  
+
+                          <label class="input-box input-field">
+                            <select>
+                                <option value="" disabled selected>District Of Violation</option>
+                                <option value="1">Agogo</option>
+                                <option value="2">Amuru</option>
+                                <option value="3">Gulu</option>
+                                <option value="4">Kitgum</option>
+                                <option value="5">Lamwo</option>
+                                <option value="6">Nwoya</option>
+                                <option value="7">Pader</option>
+                              </select>
+                          </label>
+
+                          <label class="input-box">
+                            <input class="input input__last-name" type="text"
+                              placeholder="Victims Involved" name="last-name" />
+                            <div class="input-invalid-message">Last Name cannot be empty</div>
+                          </label>
+                          <label class="input-box">
+                            <input class="input input__first-name" type="text"
+                              placeholder="Suspects involved" name="first-name" />
+                            <div class="input-invalid-message">First Name cannot be empty
+                            </div>
+                          </label>
+                          <label class="input-box">
+                            <input class="input input__last-name" type="text"
+                              placeholder="Witnesses" name="last-name" />
+                            <div class="input-invalid-message">Last Name cannot be empty</div>
+                          </label>
+                          <label class="input-box">
+                            <input class="input input__first-name" type="text"
+                              placeholder="Injuried And Damages" name="first-name" />
+                            <div class="input-invalid-message">First Name cannot be empty
+                            </div>
+                          </label>
+                          <label class="input-box">
+                            <input class="input input__last-name" type="text"
+                              placeholder="Response By Authorities" name="last-name" />
+                            <div class="input-invalid-message">Last Name cannot be empty</div>
+                          </label>
+                          <label class="input-box">
+                            <input class="input input__first-name" type="text"
+                              placeholder="Any Other Information" name="first-name" />
+                            <div class="input-invalid-message">First Name cannot be empty
+                            </div>
+                          </label>
+                    </div>
+
+                    <h5 class="header center #01579b light-blue-text text-darken-4">3.Visual Evidence</h5>
+                    <div class="col s12 relative">
+                        <div class="field-status-icons">
+                            <i style="display: none;" id="create-group-email-is-valid" class="green-text mdi-navigation-check"></i>
+                            <i style="display: none;" id="create-group-email-is-not-valid" class="red-text mdi-navigation-close"></i>
+                        </div>
+                
+                        <div class="file-field input-field">
+                            <div class="btn">
+                              <span>Upload Image</span>
+                              <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text">
+                            </div>
+                          </div>
+                          
+                          <div class="file-field input-field">
+                            <div class="btn">
+                              <span>Upload Video</span>
+                              <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text">
+                            </div>
+                          </div>
+                          
+                    </div>
+                    </div>
+                
+                    <div id="home-started-card-no-user-panel">
+                        <div class="col s12" id="create-group-message-container">
+                            <div class="materialize-red-text lighten-2"></div>
+                        </div>
+                        <div class="col s12 center relative">
+                            <div style="display: none;" id="create-group-spinner" class="">
+                                                        <div class="preloader-wrapper small active">
+                                <div class="spinner-layer spinner-blue">
+                                    <div class="circle-clipper right">
+                                        <div class="circle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            </div>
+   <a href="submitted.html"> <button id="create-group-button" 
+            class="btn btn-large strong-text">
+            Report This Case
+    <svg style="width:24px;height:24px;top: 6px; position: relative; right: 2px;" 
+         viewBox="0 0 24 24">
+
+    <path fill="#ffffff" 
+          d="M5.59,7.41L7,6L13,12L7,18L5.59,16.59L10.17,12L5.59,7.41M11.59,7.41L13,6L19,12L13,18L11.59,16.59L16.17,12L11.59,7.41Z">
+    </path>
+
+    </svg>
+    </button>
+</a>
+    </div>
+</div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+</main>
+    
+<!-- Footer -->
+<footer class="page-footer">
+    <div class="right footer-copyright">
+        <h6><span class="#01579b light-blue-text text-darken-4">PELARD-N</span></h6>
+       <div class="col l6 s12">
+          <ul>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
+          </ul>
+        </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.0.slim.min.js" integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('.datepicker').datepicker();
+        $('.timepicker').timepicker();
+        $('select').formSelect();
+      });
+</script>
+</body>
+</html>

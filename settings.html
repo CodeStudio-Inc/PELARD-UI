@@ -21,7 +21,18 @@
 
 <link  rel="stylesheet" type="text/css" href="css/auth.css">
 <link  rel="stylesheet" type="text/css" href="css/styles.css">
+<link  rel="stylesheet" type="text/css" href="css/settings.css">
 <style>
+    header, main, footer {
+        padding-left: 300px;
+      }
+  
+      @media only screen and (max-width : 992px) {
+        header, main, footer {
+          padding-left: 0;
+        }
+      }
+  
 h1{
     font-family: 'Changa One', cursive;
    
@@ -42,19 +53,55 @@ h1{
 
 </head>
 
-<body data-gr-c-s-loaded="true">
+<body>
 
+    <nav> <!-- navbar content here  --> </nav>
+
+   <ul id="slide-out" class="sidenav sidenav-fixed">
+
+      <li><div class="user-view">
+        <div class="background">
+          <img src="images/EU.png">
+        </div>
+        <a href="#user"><img class="circle" src="images/avatar-9.png"></a>
+        <a href="#name"><span class="white-text name">Adrian Ssali</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      </div></li>
+
+      <li><a href="https://pelard-n.netlify.app/"><i class="material-icons">home</i>Home</a></li>
+      <li><a href="https://pelard-n.netlify.app/"><i class="material-icons">dashboard</i>Dashboard</a></li>
+      <li><a href="report.html"><i class="material-icons">report</i>Report A New Case</a></li>
+      <li><a href="settings.html"><i class="material-icons">settings</i>Settings</a></li>
+      
+      
+      <li><div class="divider"></div></li>
+      <li><a class="waves-effect" href="index.html">Logout</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class=" black-text sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+               
+    <!--Side nav End-->     
+<main>         
     <div id="create" class="home-width">
-        <div class="spacer"></div>
-        <div class="spacer"></div>
+        
         <div id="home-started-card-container">
+      
             <div id="home-started-card" class="">
                 <div class="row">
-                    <div id="home-started-card-header">
-                        <h2 class="header center ">
-                        <span class="#01579b light-blue-text text-darken-4">PELARD-N</span></h2>
-                    </div>
-                    <h5 class="header center black-text">Login</h5>
+                    <h5 class="header center black-text">Edit Your Profile</h5>
+                        <!--image-->
+       
+    <div class="avatar-upload">
+        <div class="avatar-edit">
+            <input class="imageput" type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+            <label class="imagelabel" for="imageUpload"></label>
+        </div>
+        <div class="avatar-preview">
+            <div id="imagePreview" style="background-image: url(images/avatar-9.png);">
+            </div>
+        </div>
+    </div>
+
+<!--image-->
                     <div class="col s12 relative">
                         <div class="field-status-icons">
                             <i style="display: none;" id="create-group-email-is-valid" class="green-text mdi-navigation-check"></i>
@@ -63,28 +110,18 @@ h1{
                 
                         <label class="input-box">
                             <input class="input input__email-adress" type="email"
-                              placeholder="Email Address" name="email-address" />
+                              placeholder="New Email Address" name="email-address" />
                             <div class="input-invalid-message">Look like this is not an email
                             </div>
                           </label>
                           <label class="input-box">
                             <input class="input input__password" type="password"
-                              placeholder="Password" name="password" />
+                              placeholder="New Password" name="password" />
                             <div class="input-invalid-message">Password cannot be empty</div>
                           </label>
                     </div>
                     </div>
-                    <!---->
-                    <div class="form-group login-group-checkbox">
-						<input type="checkbox" id="lg_remember" name="lg_remember">
-						<label for="lg_remember">remember me</label>
-                    </div>
-
-                    <div class="etc-login-form">
-                        <p>forgot your password? <a href="forgot.html">click here</a></p>
-                    </div>
-
-                    <!---->
+                   
                     <div id="home-started-card-no-user-panel">
                         <div class="col s12" id="create-group-message-container">
                             <div class="materialize-red-text lighten-2"></div>
@@ -101,10 +138,9 @@ h1{
                             </div>
     
                             </div>
-   <a href="report.html" > 
-   <button id="create-group-button" 
+    <button id="create-group-button" 
             class="btn btn-large strong-text">
-            Login 
+            Save Changes
     <svg style="width:24px;height:24px;top: 6px; position: relative; right: 2px;" 
          viewBox="0 0 24 24">
 
@@ -114,12 +150,10 @@ h1{
 
     </svg>
     </button>
-</a>
+
     </div>
                     </div>
-                   <div class="etc-login-form">
-                        <p>I dont have an account! <a href="register.html">Register</a></p>
-                    </div>
+                  
 
                 </div>
                 
@@ -128,14 +162,14 @@ h1{
     </div>
     <div class="spacer"></div>
     <div class="spacer"></div>
-   
+</main>
+    
 <!-- Footer -->
 <footer class="page-footer">
     <div class="right footer-copyright">
+        <h6><span class="#01579b light-blue-text text-darken-4">PELARD-N</span></h6>
        <div class="col l6 s12">
-          <h5 class="black-text">Partners</h5>
           <ul>
-          
             <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
             <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
             <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
@@ -149,5 +183,11 @@ h1{
 <!-- Compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js" integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+</script>
+<script src="js/settings.js"></script>
 </body>
 </html>
