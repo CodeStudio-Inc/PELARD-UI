@@ -20,6 +20,9 @@
         <link rel="stylesheet" type="text/css" href="css/auth.css" />
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
         <style>
+         .card-two, .card-three,.card-four{
+          display: none;
+      }
             header,
             main,
             footer {
@@ -88,7 +91,7 @@
                         <span class="white-text">Reporting New Case</span>
                     </h3>
                 </div>
-                <div id="home-started-card-container">
+                <div class="card-one" id="home-started-card-container">
                     <div id="home-started-card" class="">
                         <div class="row">
                             <h5 class="header center #01579b light-blue-text text-darken-4">1.Reporter's Information</h5>
@@ -107,11 +110,12 @@
                                     Date And Time
                                     <input id="dateTime" type="datetime-local" class="datepicker" placeholder="Date And Time" />
                                 </label>
+                                 <button class="btn btn-small" onclick="moveToCard2()">Continue</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="home-started-card-container">
+                <div class="card-two" id="home-started-card-container">
                     <div id="home-started-card" class="">
                         <div class="row">
                             <h5 class="header center #01579b light-blue-text text-darken-4">2.Violation Details</h5>
@@ -168,11 +172,13 @@
                                     <span>Any Other Violations/Details</span>
                                     <textarea id="otherViolation" placeholder="Any Other Violations/Details" id="textarea1" class="materialize-textarea"></textarea>
                                 </label>
+                                <button class="btn btn-small" onclick="moveBackToCard1()">Back</button>
+                                <button class="btn btn-small" onclick="moveToCard3()">Continue</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="home-started-card-container">
+                <div class="card-three" id="home-started-card-container">
                     <div id="home-started-card" class="">
                         <div class="row">
                             <h5 class="header center #01579b light-blue-text text-darken-4">3.People Involved</h5>
@@ -201,11 +207,13 @@
                                     <span>Any Other Witnesses</span>
                                     <textarea id="otherWitness" placeholder="Any Other Witnesses" id="textarea1" class="materialize-textarea"></textarea>
                                 </label>
+                                <button class="btn btn-small" onclick="moveBackToCard2()">Back</button>
+                                <button class="btn btn-small" onclick="moveToCard4()">Continue</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="home-started-card-container">
+                <div class="card-four" id="home-started-card-container">
                     <div id="home-started-card" class="">
                         <div class="row">
                             <h5 class="header center #01579b light-blue-text text-darken-4">4.Visual/Audio Evidence</h5>
@@ -228,6 +236,7 @@
                                     <span>Uploaded File Description</span>
                                     <textarea id="fileDescription" placeholder="Fule Description" id="textarea1" class="materialize-textarea"></textarea>
                                 </label>
+                                <button class="btn btn-small" onclick="moveBackToCard3()">Back</button>
                             </div>
                         </div>
                         <div id="home-started-card-no-user-panel">
@@ -244,6 +253,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <button id="create-group-button" class="btn btn-large strong-text">
                                     Report This Case
                                     <svg style="width: 24px; height: 24px; top: 6px; position: relative; right: 2px;" viewBox="0 0 24 24">
@@ -260,7 +270,7 @@
         <!-- Footer -->
         <footer class="page-footer">
             <div class="right footer-copyright">
-                <h6><span class="#01579b light-blue-text text-darken-4">PELARD-N</span></h6>
+                <h6><span class="#01579b light-blue-text text-darken-4">PELARD</span></h6>
                 <div class="col l6 s12">
                     <ul>
                         <li class="partners">
@@ -292,6 +302,55 @@
                 $("select").formSelect();
             });
         </script>
+
+        <script>
+  var card1 = document.querySelector(".card-one");
+  var card2 = document.querySelector(".card-two");
+  var card3 = document.querySelector(".card-three");
+  var card4 = document.querySelector(".card-four");
+  function moveToCard2() {
+   card1.style.display = "none"
+   card2.style.display = "block"
+   card3.style.display = "none"
+   card4.style.display = "none"
+  }
+
+  function moveToCard3() {
+    card1.style.display = "none"
+    card2.style.display = "none"
+    card3.style.display = "block"
+    card4.style.display = "none"
+  }
+  function moveToCard4() {
+    card1.style.display = "none"
+    card2.style.display = "none"
+    card3.style.display = "none"
+    card4.style.display = "block"
+   }
+ 
+
+   function moveBackToCard3() {
+    card1.style.display = "none"
+    card2.style.display = "none"
+    card3.style.display = "block"
+    card4.style.display = "none"
+   }
+ 
+   function moveBackToCard2() {
+     card1.style.display = "none"
+     card2.style.display = "block"
+     card3.style.display = "none"
+     card4.style.display = "none"
+   }
+   function moveBackToCard1() {
+     card1.style.display = "block"
+     card2.style.display = "none"
+     card3.style.display = "none"
+     card4.style.display = "none"
+    }
+   
+
+</script>
         <script>
             const baseUrl = "https://pelard-n.herokuapp.com";
             const secret = "2cfb9e9a-34a9-4843-961f-6e2639c41856-b10445eb-a0e8-4fa2-b636-015b2f1e3660";
@@ -358,7 +417,7 @@
                 const otherSuspect  = document.getElementById("otherSuspect").value;
                 const witnessName = document.getElementById("witnessName").value;
                 const otherWitness = document.getElementById("otherWitness").value;
-          //People Involved     
+          //Evidence     
                 const files = document.getElementById("img").files;
                 const fileDescription = document.getElementById("fileDescription").value;
 
