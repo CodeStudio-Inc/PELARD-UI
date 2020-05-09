@@ -22,6 +22,31 @@ const baseUrl = 'https://pelard-n.herokuapp.com';
   if (!access) return false
 }
 
+const handleSubmit = async ({ files }) => {
+  try {
+    const SERVER_URI = "https://api.cloudinary.com/v1_1/dwa3soopc/upload";
+
+    const formData = new FormData();
+
+    formData.append("file", files[0]);
+    formData.append("upload_preset", "dh1h4tq3");
+    formData.append("folder", "pelard-n");
+
+    const options = {
+      method: "POST",
+      body: formData,
+    };
+
+    const response = await fetch(SERVER_URI, options);
+    const json = await response.json();
+    const { secure_url } = json;
+
+    console.log(`secure_url ${secure_url}`); // You send me this secure url
+  } catch (errors) {
+    console.log(errors);
+  }
+};
+
   const userReport = async () => {
      //Reporters Information
 		const reporterName = document.getElementById("reporterName").value;
@@ -33,10 +58,10 @@ const baseUrl = 'https://pelard-n.herokuapp.com';
 		 const violationType = document.getElementById("violationType").options[
 							  document.getElementById("violationType").selectedIndex].value;
 		const violationDescription = document.getElementById("violationDescription").value;
-		//const injuries = document.getElementById("injuries").value;
-		// const contactAuthority = document.getElementById("contactAuthority").value;
-		//const authorityResponse = document.getElementById("authorityResponse").value;
-		//const otherViolation = document.getElementById("otherViolation").value;
+		const injuries = document.getElementById("injuries").value;
+		const contactAuthority = document.getElementById("contactAuthority").value;
+	  const authorityResponse = document.getElementById("authorityResponse").value;
+		const otherViolation = document.getElementById("otherViolation").value;
   //People Involved 
 		const victimName = document.getElementById("victimName").value;
 		const otherVictim = document.getElementById("otherVictim").value;
@@ -45,10 +70,11 @@ const baseUrl = 'https://pelard-n.herokuapp.com';
 		const witnessName = document.getElementById("witnessName").value;
 		const otherWitness = document.getElementById("otherWitness").value;
   //Evidence     
-		//const files = document.getElementById("img").files;
-		//const fileDescription = document.getElementById("fileDescription").value;
+		const files = document.getElementById("img").files;
+		const fileDescription = document.getElementById("fileDescription").value;
     try {
       const token = await getToken({ secret, _id });
+      const secure_url= await handleSubmit({ files });
       const validLogin = await isLoggedIn()
 
 //async function autoRedirect () {}
@@ -59,52 +85,70 @@ const response = await fetch(`${baseUrl}/violations/create`, {
           Authorization: token
         },
         body: JSON.stringify(
-            {
-                   type: violationType,
-                   dateTime: dateTime,
-                   description: violationDescription,
-                   reporter: {
-                       name: reporterName,
-                       contact: reporterContact,
-                   },
-                   location: {
-                    name: districtOfViolation,
-                  },
-                  involved: [
-                    { type: "victim", name: victimName,
-                    relevantLinks:[
-                    { 
-                      description:otherVictim,
-                      link: "string"
-                      }
-                    ] 
-                    },
-        
-                    { type: "suspect", name: suspectName,
-                    relevantLinks:[
-                    { 
-                      description:otherSuspect,
-                      link: "string"
-                      }
-                    ] 
-                     },
-                    { type: "witness", name: witnessName,
-                    relevantLinks:[
-                    { 
-                      description:otherWitness,
-                      link: "string"
-                      }
-                    ] 
-                     },
-                  ]
-               })
-      });
+          {
+            reporter: {
+                name: reporterName,
+                contact: reporterContact,
+            },
+            dateTime: dateTime,
+            type: violationType,
+            description: violationDescription,
+            location: {
+                name: districtOfViolation,
+            },
+            
+            involved: [
+                { type: "victim", name: victimName,
+                relevantLinks:[
+                { 
+                  description:otherVictim,
+                  link:'string'
+                  }
+                ] 
+                },
+
+                { type: "suspect", name: suspectName,
+                relevantLinks:[
+                { 
+                  description:otherSuspect,
+                  link:'string'
+                  }
+                ] 
+                 },
+                { type: "witness", name: witnessName,
+                relevantLinks:[
+                { 
+                  description:otherWitness,
+                  link:'string'
+                  }
+                ] 
+                 },
+            ],
+             injuries: [
+              {
+                description: injuries,
+                link: "string"
+              }
+            ],
+            authorityResponse:[
+                { name: contactAuthority, response: authorityResponse,
+                 relevantLinks:[
+                { 
+                  description:otherViolation,
+                  link:fileDescription
+                  }
+                ] 
+                 },
+               
+            ]
+        })
+    });
   
       const json = await response.json();
       console.log(json);
   console.log('Case Documented');
- if (!validLogin && location.pathname !== '/report') window.location = '/report.html';
- if (validLogin && location.pathname === '/report') window.location ='/submitted.html';
+  if (!validLogin && location.pathname !== '/report') window.location = '/report.html';
+if (validLogin && location.pathname === '/report') window.location ='/submitted.html';
        
     } catch (errors) {
       console.log(errors);
