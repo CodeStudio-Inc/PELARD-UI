@@ -55,7 +55,7 @@ const response = await fetch(`${baseUrl}/user/register`, {
       sessionStorage.setItem('_id', json.data.userId)
        console.log('Logged In');
  if (!validLogin && location.pathname !== '/register') window.location = '/report.html';
-  if (validLogin && location.pathname === '/register') window.location ='/submitted.html';
+  if (validLogin && location.pathname === '/register') window.location ='/register.html';
        
     } catch (errors) {
       console.log(errors);
