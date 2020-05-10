@@ -22,6 +22,10 @@
 <link  rel="stylesheet" type="text/css" href="css/auth.css">
 <link  rel="stylesheet" type="text/css" href="css/styles.css">
 <style>
+    .two{
+        display: none;
+    }
+
 h1{
     font-family: 'Changa One', cursive;
    
@@ -44,7 +48,38 @@ h1{
 
 <body data-gr-c-s-loaded="true">
 
-    <div id="create" class="home-width">
+    <div id="create " class=" one home-width">
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div id="home-started-card-container">
+            <div id="home-started-card" class="">
+                <div class="row">
+       
+                    <div id="home-started-card-header">
+                        <h2 class="header center ">
+                        <span class="#01579b light-blue-text text-darken-4">PELARD-N</span></h2>
+                    </div>
+          <h5 class="center">Monitoring Documentation And Reporting(MDR)</h5>
+ 
+
+        <div class="card">
+          <div class="card-image">
+           <img src="images/monitor.png">
+          </div>
+          <div class="card-content center">
+            <h5 class="header center black-text">Welcome</h5>
+              <a class="btn btn-small" onclick="moveTologinCard()">Get Started</a>
+              <ul>
+                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
+                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
+                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
+                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
+              </ul>
+            </div>
+          </div>
+      </div></div></div></div>
+
+    <div id="create" class="two home-width">
         <div class="spacer"></div>
         <div class="spacer"></div>
         <div id="home-started-card-container">
@@ -61,7 +96,8 @@ h1{
                             <i style="display: none;" id="create-group-email-is-not-valid" class="red-text mdi-navigation-close"></i>
                         </div>
                 
-                         <label class="input-box">
+                        <label class="input-box">
+                             <label class="input-box">
               <input id = "userName" class="input input__user-name" type="text"
                 placeholder="User Name" name="user-name" />
               <div class="input-invalid-message">User Name cannot be empty</div>
@@ -99,7 +135,7 @@ h1{
                                 </div>
                             </div>
     
-                            </div>
+                            </div> 
    <button id="create-group-button" 
             class="btn btn-large strong-text">
             Login 
@@ -147,6 +183,11 @@ h1{
 <!-- Compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js" integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="js/login.js"><script>
+<script src="js/login.js"></script>
+<script src="js/cardtoggle.js"></script>
+<script>
+
+</script>
+  
 </body>
 </html>

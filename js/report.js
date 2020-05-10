@@ -74,7 +74,7 @@ const handleSubmit = async ({ files }) => {
 		const fileDescription = document.getElementById("fileDescription").value;
     try {
       const token = await getToken({ secret, _id });
-      const secure_url= await handleSubmit({ files });
+     // const secure_url= await handleSubmit({ files });
       const validLogin = await isLoggedIn()
 
 //async function autoRedirect () {}

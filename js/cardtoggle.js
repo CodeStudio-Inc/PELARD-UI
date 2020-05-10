@@ -44,3 +44,10 @@ function moveToCard4() {
    card4.style.display = "none"
   }
  
+  var welcomeCard = document.querySelector(".one");
+  var loginCard = document.querySelector(".two");
+
+  function moveTologinCard() {
+    welcomeCard.style.display = "none"
+    loginCard.style.display = "block"
+   }
