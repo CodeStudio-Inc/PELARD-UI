@@ -24,6 +24,9 @@
 }
 
   const userLogin = async () => {
+    const loader =document.querySelector('div.progress');
+    loader.style.display = "block"
+
   const userName =document.getElementById('userName').value;
   const password =document.getElementById('password').value;
     try {

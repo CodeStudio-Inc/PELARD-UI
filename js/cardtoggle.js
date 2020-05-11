@@ -44,10 +44,29 @@ function moveToCard4() {
    card4.style.display = "none"
   }
  
-  var welcomeCard = document.querySelector(".one");
-  var loginCard = document.querySelector(".two");
+  
+  var loginCard= document.querySelector(".four");
+  var welcomeCard1 = document.querySelector(".one");
+  var welcomeCard2 = document.querySelector(".two");
+  var welcomeCard3= document.querySelector(".three");
 
   function moveTologinCard() {
-    welcomeCard.style.display = "none"
+    welcomeCard1.style.display = "none"
+    welcomeCard2.style.display = "none"
+    welcomeCard3.style.display = "none"
     loginCard.style.display = "block"
+   }
+
+   function moveToWelcomeCard2(){
+    welcomeCard1.style.display = "none"
+    welcomeCard2.style.display = "block"
+    welcomeCard3.style.display = "none"
+    loginCard.style.display = "none"
+   }
+
+   function moveToWelcomeCard3(){
+    welcomeCard1.style.display = "none"
+    welcomeCard2.style.display = "none"
+    welcomeCard3.style.display = "block"
+    loginCard.style.display = "none"
    }

@@ -22,7 +22,7 @@
 <link  rel="stylesheet" type="text/css" href="css/auth.css">
 <link  rel="stylesheet" type="text/css" href="css/styles.css">
 <style>
-    .two{
+    .two,.three,.four,.five, div.progress {
         display: none;
     }
 
@@ -48,48 +48,98 @@ h1{
 
 <body data-gr-c-s-loaded="true">
 
-    <div id="create " class=" one home-width">
+
+    <div id="create" class="one home-width">
         <div class="spacer"></div>
         <div class="spacer"></div>
         <div id="home-started-card-container">
-            <div id="home-started-card" class="">
+            <div id="home-started-card">
                 <div class="row">
-       
-                    <div id="home-started-card-header">
-                        <h2 class="header center ">
-                        <span class="#01579b light-blue-text text-darken-4">PELARD-N</span></h2>
-                    <h5 class="center">Monitoring Documentation And Reporting(MDR)</h5>
-                    </div>
- 
-
-        <div class="card">
+           
           <div class="card-image">
-           <img src="images/monitor2.png">
+            <div class="spacer"></div>
+           <img src="images/onbod2.png">
           </div>
            </div>
           <div class="card-content center">
-            <h5 class="header center black-text">Welcome</h5>
-              <a class="btn btn-small" onclick="moveTologinCard()">Get Started</a>
-              <ul>
-                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
-                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/gwed.jpg"></a></li>
-                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/hurifo.jpg"></a></li>
-                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/sol.png"></a></li>
-              </ul>
+            <h2 class="header center ">
+                <span class="#01579b light-blue-text text-darken-4">PELARD-N</span></h2>
+            <h5 class="center">Protection And Empowerment Of Land Rights Defenders-Northern Uganda</h5> 
+            <a class="btn btn-small" onclick="moveTologinCard()">Get Started</a>
             </div>
-         
-      </div></div></div></div>
+            <ul class="slider-dots">
+                <li class="dot active-dot">&bull;</li>
+                <li class="dot">&bull;</li>
+                <li class="dot">&bull;</li>
+              </ul>
+            <ul>
+                <li class = "partners"><a href="#" onclick="moveToWelcomeCard2()">Next</a></li>
+                <li class = "partners logos"><a href="#" onclick="moveToWelcomeCard2()"><i class="fas fa-arrow-right"></a></i> </li>
+            </ul>
+               
+      </div></div></div>
+
+
 
     <div id="create" class="two home-width">
         <div class="spacer"></div>
         <div class="spacer"></div>
         <div id="home-started-card-container">
+            <div id="home-started-card">
+                <div class="row">
+            <h2 class="header center ">
+                <span class="#01579b light-blue-text text-darken-4">PELARD-N</span></h2>
+          <div class="card-image">
+           <img src="images/onbod1.png">
+          </div>
+           </div>
+          <div class="card-content center">
+            <h5 class="center">Monitoring Documentation And Reporting(MDR)</h5>
+              <a class="btn btn-small" onclick="moveTologinCard()">Get Started</a>
+             
+            </div>
+            <ul class="slider-dots">
+                <li class="dot">&bull;</li>
+                <li class="dot active-dot">&bull;</li>
+                <li class="dot">&bull;</li>
+              </ul>
+              <ul>
+                <li class = "partners"><a href="#" onclick="moveToWelcomeCard3()">Next</a></li>
+                <li class = "partners logos"><a href="#" onclick="moveToWelcomeCard3()"><i class="fas fa-arrow-right"></a></i> </li>
+            </ul>
+      </div></div></div>
+
+   
+      <div id="create" class="three home-width">
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div id="home-started-card-container">
+            <div id="home-started-card">
+                <div class="row">
+            <h2 class="header center ">
+          <div class="card-image">
+           <img src="images/onbod3.png">
+          </div>
+           </div>
+          <div class="card-content center">
+              <a class="btn btn-small" onclick="moveTologinCard()">Get Started</a>
+            </div>
+            <ul class="slider-dots">
+                <li class="dot">&bull;</li>
+                <li class="dot">&bull;</li>
+                <li class="dot active-dot">&bull;</li>
+              </ul>
+      </div></div></div>
+   
+
+      <div id="create" class="four home-width">
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+        <div id="home-started-card-container">
             <div id="home-started-card" class="">
                 <div class="row">
-                    <div id="home-started-card-header">
                         <h2 class="header center ">
                         <span class="#01579b light-blue-text text-darken-4">PELARD-N</span></h2>
-                    </div>
                     <h5 class="header center black-text">Login</h5>
                     <div class="col s12 relative">
                         <div class="field-status-icons">
@@ -152,33 +202,20 @@ h1{
 
     </div>
                     </div>
+                    <div class="progress">
+                        <div class="indeterminate"></div>
+                    </div>
                    <div class="etc-login-form">
                         <p>I dont have an account! <a href="register.html">Register</a></p>
                     </div>
-
+                    
                 </div>
                 
             </div>
         </div>
+        
     </div>
-    <div class="spacer"></div>
-    <div class="spacer"></div>
-   
-<!-- Footer -->
-<footer class="page-footer">
-    <div class="right footer-copyright">
-       <div class="col l6 s12">
-          <h5 class="black-text">Partners</h5>
-         <ul>
-                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
-                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/gwed.jpg"></a></li>
-                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/hurifo.jpg"></a></li>
-                <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/sol.png"></a></li>
-              </ul>
-        </div>
-    </div>
-  </footer>
-  <!-- Footer -->
+
 
 <!-- Compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js" integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
