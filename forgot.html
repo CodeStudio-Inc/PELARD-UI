@@ -21,6 +21,9 @@
 <link  rel="stylesheet" type="text/css" href="css/auth.css">
 <link  rel="stylesheet" type="text/css" href="css/styles.css">
 <style>
+  div.progress {
+    display: none;
+}
     .btn{
         background-color: var(--Blue);
     }
@@ -63,11 +66,15 @@
 				<div class="login-group">
 					<div class="form-group">
 						<label for="fp_email" class="sr-only">Email address</label>
-						<input type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email address">
+						<input id="email" type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email address">
 					</div>
 				</div>
-				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+				<button id="create-group-button" type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
 			</div>
+       <span id="message"></span><span id="message2"></span>
+       <div class="progress">
+        <div class="indeterminate"></div>
+    </div>     
 			<div class="etc-login-form">
 				<p>already have an account? <a href="index.html">login here</a></p>
 				<p>new user? <a href="register.html">create new account</a></p>
@@ -84,9 +91,9 @@
           <h5 class="black-text">Partners</h5>
           <ul>
             <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
-            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
-            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
-            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/sol.png"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/hurifo.jpg"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/gwed.jpg"></a></li>
           </ul>
         </div>
     </div>
@@ -96,5 +103,6 @@
 <!-- Compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js" integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="js/recovery.js"></script>
 </body>
 </html>
