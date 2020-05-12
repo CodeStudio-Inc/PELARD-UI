@@ -23,6 +23,8 @@ const baseUrl = 'https://pelard-n.herokuapp.com';
 }
 
   const userRegister = async () => {
+    const loader =document.querySelector('div.progress');
+    loader.style.display = "block"
     const firstName =document.getElementById('firstName').value;
 	const lastName =document.getElementById('lastName').value;
 	const userName =document.getElementById('userName').value;
@@ -59,6 +61,7 @@ const response = await fetch(`${baseUrl}/user/register`, {
        
     } catch (errors) {
       console.log(errors);
+      document.getElementById("register_failed").innerHTML = `username taken or phone does not start with 7`;
     }
 
   

@@ -14,13 +14,17 @@
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
  <!-- Google Fonts -->
  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
- 
+ <link rel="icon" href="favicon.ico">
  <!--Import Google Icon Font-->
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <link  rel="stylesheet" type="text/css" href="css/auth.css">
 <link  rel="stylesheet" type="text/css" href="css/styles.css">
 <style>
+div.progress {
+        display: none;
+    }
+
     .btn{
         background-color: var(--Blue);
     }
@@ -49,6 +53,7 @@
                         <span class="#01579b light-blue-text text-darken-4">PELARD-N</span></h2>
                     </div>
                     <h5 class="header center black-text">Register</h5>
+                    <span id="register_failed"></span>
                     <div class="col s12 relative">
                         <div class="field-status-icons">
                             <i style="display: none;" id="create-group-email-is-valid" class="green-text mdi-navigation-check"></i>
@@ -112,8 +117,11 @@
                                     </div>
                                 </div>
                             </div>
-    
+      
                             </div>
+                     <div class="progress">
+                        <div class="indeterminate"></div>
+                    </div>     
                             
     <button id="create-group-button" 
            class="btn btn-large strong-text">
@@ -146,9 +154,9 @@
           <h5 class="black-text">Partners</h5>
           <ul>
             <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
-            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
-            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
-            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/sol.png"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/gwed.jpg"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/hurifo.jpg"></a></li>
           </ul>
         </div>
     </div>
@@ -159,5 +167,7 @@
 <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js" integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="js/register.js"></script>
+
+
 </body>
 </html>
