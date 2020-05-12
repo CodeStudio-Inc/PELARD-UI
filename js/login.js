@@ -50,13 +50,19 @@
   
       const json = await response.json();
       console.log(json);
-  console.log('Logged In');
   sessionStorage.setItem('_id', json.data.user._id)
-  if (!validLogin && location.pathname !== '/index') window.location = '/report.html';
-  if (validLogin && location.pathname === '/index') window.location ='/index.html';
+  if (!validLogin && location.pathname !== '/index') {
+    window.location = '/report.html';
+   
+  }
+  if (validLogin && location.pathname === '/index'){
+    window.location ='/index.html';
+    
+  } 
        
     } catch (errors) {
       console.log(errors);
+      document.getElementById("login_failed").innerHTML = `wrong password or username`;
     }
 
   
