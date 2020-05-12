@@ -54,9 +54,10 @@ const handleSubmit = async ({ files }) => {
 		const dateTime =document.getElementById('dateTime').value;
   //Violation Details
 		const districtOfViolation = document.getElementById("districtOfViolation").options[
-							  document.getElementById("districtOfViolation").selectedIndex].value;
+							  document.getElementById("districtOfViolation").selectedIndex].text;
 		 const violationType = document.getElementById("violationType").options[
-							  document.getElementById("violationType").selectedIndex].value;
+                document.getElementById("violationType").selectedIndex].text;
+                
 		const violationDescription = document.getElementById("violationDescription").value;
 		const injuries = document.getElementById("injuries").value;
 		const contactAuthority = document.getElementById("contactAuthority").value;
@@ -74,7 +75,7 @@ const handleSubmit = async ({ files }) => {
 		const fileDescription = document.getElementById("fileDescription").value;
     try {
       const token = await getToken({ secret, _id });
-     // const secure_url= await handleSubmit({ files });
+      const secure_url= await handleSubmit({ files });
       const validLogin = await isLoggedIn()
 
 //async function autoRedirect () {}
@@ -147,7 +148,7 @@ const response = await fetch(`${baseUrl}/violations/create`, {
       const json = await response.json();
       console.log(json);
   console.log('Case Documented');
-  if (!validLogin && location.pathname !== '/report') window.location = '/report.html';
+  if (!validLogin && location.pathname !== '/report') window.location = '/submitted.html';
 if (validLogin && location.pathname === '/report') window.location ='/submitted.html';
        
     } catch (errors) {
