@@ -141,6 +141,12 @@ const response = await fetch(`${baseUrl}/violations/create`, {
                 ] 
                  },
                
+            ],
+            otherInfo: [
+              {
+                description: "string",
+                link:secure_url
+              }
             ]
         })
     });
