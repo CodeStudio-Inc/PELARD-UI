@@ -147,18 +147,20 @@ h1{
                             <i style="display: none;" id="create-group-email-is-not-valid" class="red-text mdi-navigation-close"></i>
                         </div>
                 
-                       <div class="input-field col s12">     
-                 <input id = "userName" class="input" type="text"/>
-                 <div class="input-invalid-message">User Name cannot be empty</div>
-                 <label class="input-box">User Name</label>
-                        </div>
-
+                       <div class="row">
+                            <form class="col s12">
                         <div class="input-field col s12">
-                            <input id = "password" class="input" type="password"/>
+                            <input placeholder="username" id = "userName" class="validate" type="text"/>
+                            <div class="input-invalid-message">User Name cannot be empty</div>
+                            <label class="input-box" for="first_name">User Name</label>
+                          </div>
+            
+                        <div class="input-field col s12">
+                        <input placeholder="password" id = "password" class="validate" type="password"/>
                         <div class="input-invalid-message">Password cannot be empty</div>
-                                <small></small>
-                                <label class="input-box">Password</label>
+                        <label for="password" class="input-box">Password</label>
                         </div>
+                       </form></div>
                     </div>
                     </div>
                     <!---->
