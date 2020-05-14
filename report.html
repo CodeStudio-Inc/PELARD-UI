@@ -98,20 +98,25 @@
                         <div class="row">
                             <h5 class="header center #01579b light-blue-text text-darken-4">1.Reporter's Information</h5>
                             <div class="col s12 relative">
-                                <label class="input-box input-field">
-                                    <input id="reporterName" class="input input__first-name" type="text" placeholder="Name" name="first-name" />
+
+                                    <div class="input-field col s12">
+                                    <input id="reporterName" class="input" type="text"/>
                                     <div class="input-invalid-message">Reporter's Name cannot be empty</div>
-                                </label>
+                                    <label class="input-box ">Name</label>
+                                    </div>
 
-                                <label class="input-box" for="phone">
-                                    <small>Format: 7-000-0000</small>
-                                    <input id="reporterContact" class="input" type="tel" id="phone" placeholder="Contact Phone" name="phone" required />
-                                </label>
+                               
+                                   <div class="input-field col s12">
+                                <input id="reporterContact" class="input" type="tel" id="phone" required />
+                                 <small>Format: 7-000-0000</small>
+                                 <label class="input-box" for="phone">Contact Phone</label>
+                                 </div>
 
-                                <label class="input-box">
-                                    Date And Time
-                                    <input id="dateTime" type="date" class="datepicker" placeholder="Date And Time" />
-                                </label>
+                                  <div class="input-field col s12">
+                                    <input id="dateTime" type="date" class="datepicker" />
+                                    <label class="input-box">Date And Time</label>
+                                 </div>
+
                                  <button class="btn btn-small" onclick="moveToCard2()">Continue</button>
                             </div>
                         </div>
@@ -125,9 +130,9 @@
                             <br />
                             <div class="col s12 relative">
 
-                                <label class="input-box input-field">
-                                    <select id="districtOfViolation">
-                                        <option value="" disabled selected>District Of Violation</option>
+                                    <div class="input-field col s12">
+                                       <select id="districtOfViolation">
+                                        <option value="" disabled selected> Choose District Of Violation</option>
                                         <option value="1">Agogo</option>
                                         <option value="2">Amuru</option>
                                         <option value="3">Gulu</option>
@@ -136,11 +141,13 @@
                                         <option value="6">Nwoya</option>
                                         <option value="7">Pader</option>
                                     </select>
-                                </label>
+                                        <label>District</label>
+                                     </div>
+                
 
-                                <label>
-                                    <select id="violationType">
-                                        <option value="" disabled selected>Type Of Violation</option>
+                                 <div class="input-field col s12">
+                                 <select id="violationType">
+                                        <option value="" disabled selected> Choose Type Of Violation</option>
                                         <option value="1">Assault</option>
                                         <option value="2">Domestic Violance</option>
                                         <option value="3">Attempted Murder</option>
@@ -148,32 +155,34 @@
                                         <option value="5">Harrassment</option>
                                         <option value="6">Intimidation</option>
                                     </select>
-                                </label>
+                               <label class="input-box ">Violation</label>
+                                </div>
 
-                                <label class="input-box input-field">
-                                    <span>Description Of Violation</span>
-                                    <textarea id="violationDescription" placeholder="Discription Of Violation" id="textarea1" class="materialize-textarea"></textarea>
-                                </label>
+                                  <div class="input-field col s12">
+                                  <textarea id="violationDescription" class=" materialize-textarea"></textarea>
+                                <label class="input-box ">Describe The Violation</label>
+                                  </div>
 
-                                <label class="input-box input-field">
-                                    <span>Damages/Injuries</span>
-                                    <textarea id="injuries" placeholder="Damages/Injuries" id="textarea1" class="materialize-textarea"></textarea>
-                                </label>
+                               
+                                  <div class="input-field col s12">
+                                    <textarea id="injuries"  class="materialize-textarea"></textarea>
+                                 <label class="input-box">Damages/Injuries</label>
+                                   </div>
 
-                                  <label class="input-box input-field">
-                                    <span>Contacted Authorities</span>
-                                    <textarea id="contactAuthority" placeholder="Contacted Authorities" id="textarea1" class="materialize-textarea"></textarea>
-                                </label>
+                                    <div class="input-field col s12">
+                                    <textarea id="contactAuthority" class="materialize-textarea"></textarea>
+                                <label class="input-box ">Contacted Authorities</label>
+                                    </div>
 
-                                <label class="input-box input-field">
-                                    <span>Response By Authorities</span>
-                                    <textarea id="authorityResponse" placeholder="Response By Authorities" id="textarea1" class="materialize-textarea"></textarea>
-                                </label>
+                                <div class="input-field col s12">
+                                    <textarea id="authorityResponse" class="materialize-textarea"></textarea>
+                                <label class="input-box">Response By Authorities</label>
+                                  </div>
 
-                                <label class="input-box input-field">
-                                    <span>Any Other Violations/Details</span>
-                                    <textarea id="otherViolation" placeholder="Any Other Violations/Details" id="textarea1" class="materialize-textarea"></textarea>
-                                </label>
+                               <div class="input-field col s12">
+                                    <textarea id="otherViolation"class="materialize-textarea"></textarea>
+                                 <label class="input-box input-field">Any Other Violations/Details</label>
+                                </div>
                                 <button class="btn btn-small" onclick="moveBackToCard1()">Back</button>
                                 <button class="btn btn-small" onclick="moveToCard3()">Continue</button>
                                 
@@ -186,30 +195,40 @@
                         <div class="row">
                             <h5 class="header center #01579b light-blue-text text-darken-4">3.People Involved</h5>
                             <div class="col s12 relative">
-                                <label class="input-box">
-                                    <input id="victimName" class="input input__last-name" type="text" placeholder="Victim's Name" name="last-name" />
+
+                            <div class="input-field col s12">
+                                    <input id="victimName"type="text" class="validate input" />
+                                     <label class="input-box">Victim's Name</label>
                                     <div class="input-invalid-message">Victim cannot be empty</div>
-                                </label>
-                                <label class="input-box input-field">
-                                    <span>Any Other Victims</span>
-                                    <textarea id="otherVictim" placeholder="Any Other Victims" id="textarea1" class="materialize-textarea"></textarea>
-                                </label>
-                                <label class="input-box">
-                                    <input id="suspectName" class="input input__first-name" type="text" placeholder="Suspect's Name" name="first-name" />
-                                    <div class="input-invalid-message">Suspect cannot be empty</div>
-                                </label>
-                                <label class="input-box input-field">
-                                    <span>Any Other Suspects</span>
-                                    <textarea id="otherSuspect" placeholder="Any Other Suspets" id="textarea1" class="materialize-textarea"></textarea>
-                                </label>
-                                <label class="input-box">
-                                    <input id="witnessName" class="input input__last-name" type="text" placeholder="Witness'Name" name="last-name" />
+                                </div>
+
+                             <div class="input-field col s12">
+                              <textarea id="otherVictim"  class="materialize-textarea"></textarea>
+                                <label class="input-box">Any Other Victims</label>
+                              </div>
+
+                                <div class="input-field col s12">
+                                 <input id="suspectName" class="validate input" type="text" />
+                                <label class="input-box">Suspect's Name</label>
+                                <div class="input-invalid-message">Suspect cannot be empty</div>
+                                 </div>
+                                
+                                <div class="input-field col s12">
+                                <textarea id="otherSuspect" class="materialize-textarea"></textarea>
+                                <label class="input-box"> Any Other Suspets</label>
+                               </div>
+
+                                 <div class="input-field col s12">
+                                    <input id="witnessName" class="input" type="text"  />
+                                    <label class="input-box">Witness'Name </label>
                                     <div class="input-invalid-message">Witness cannot be empty</div>
-                                </label>
-                                <label class="input-box input-field">
-                                    <span>Any Other Witnesses</span>
-                                    <textarea id="otherWitness" placeholder="Any Other Witnesses" id="textarea1" class="materialize-textarea"></textarea>
-                                </label>
+                               </div>
+
+                                  <div class="input-field col s12">
+                                <label class="input-box">Any Other Witnesses</label>
+                                    <textarea id="otherWitness"class="materialize-textarea"></textarea>
+                                  </div>
+
                                 <button class="btn btn-small" onclick="moveBackToCard2()">Back</button>
                                 <button class="btn btn-small" onclick="moveToCard4()">Continue</button>
                             </div>
@@ -226,7 +245,7 @@
                                     <i style="display: none;" id="create-group-email-is-not-valid" class="red-text mdi-navigation-close"></i>
                                 </div>
 
-                                <div class="file-field input-field">
+                                <div class="file-field input-field col s12">
                                     <div class="btn">
                                         <span>Upload File</span>
                                         <input type="file" id="img" name="img" accept="audio/*,video/*,image/*" />
@@ -235,10 +254,12 @@
                                         <input class="file-path validate" type="text" />
                                     </div>
                                 </div>
-                                 <label class="input-box input-field">
-                                    <span>Uploaded File Description</span>
-                                    <textarea id="fileDescription" placeholder="Fule Description" id="textarea1" class="materialize-textarea"></textarea>
-                                </label>
+
+                                <div class="input-field col s12">
+                                 <label class="input-box input-field">Uploaded File Description</label>
+                                <textarea id="fileDescription" class="materialize-textarea"></textarea>
+                                </div>
+
                                 <button class="btn btn-small" onclick="moveBackToCard3()">Back</button>
                             </div>
                         </div>
