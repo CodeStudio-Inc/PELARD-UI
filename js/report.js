@@ -128,7 +128,7 @@ const response = await fetch(`${baseUrl}/violations/create`, {
              injuries: [
               {
                 description: injuries,
-                link: "string"
+                link: secure_url
               }
             ],
             authorityResponse:[
