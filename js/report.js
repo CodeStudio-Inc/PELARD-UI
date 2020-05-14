@@ -154,11 +154,12 @@ const response = await fetch(`${baseUrl}/violations/create`, {
       const json = await response.json();
       console.log(json);
   console.log('Case Documented');
-  if (!validLogin && location.pathname !== '/report') document.getElementById("report_failed").innerHTML = `<span style='font-size:40px'>please fill all the inputs</span>`;
+  if (!validLogin && location.pathname !== '/report') window.location ='/submitted.html' ;
 if (validLogin && location.pathname === '/report') window.location ='/submitted.html';
        
     } catch (errors) {
       console.log(errors);
+      document.getElementById("report_failed").innerHTML = `<span style='font-size:40px'>please fill all the inputs</span>`
       
     }
 
