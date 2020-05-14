@@ -59,12 +59,10 @@
         <ul id="slide-out" class="sidenav sidenav-fixed">
             <li>
                 <div class="user-view">
-                    <div class="background">
-                        <img src="images/EU.png" />
+                   <div id="home-started-card-header">
+                        <h3 class="header center ">
+                        <span class="#01579b light-blue-text text-darken-4">PELARD-N</span></h3>
                     </div>
-                    <a href="#user"><img class="circle" src="images/avatar-9.png" /></a>
-                    <a href="#name"><span class="white-text name">Adrian Ssali</span></a>
-                    <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
                 </div>
             </li>
 
@@ -72,14 +70,18 @@
                 <a href="https://pelard-n.netlify.app/"><i class="material-icons">home</i>Home</a>
             </li>
             <li>
-                <a href="https://pelard-n.netlify.app/"><i class="material-icons">dashboard</i>Dashboard</a>
+                <a href="https://pelard-dash.netlify.app/"><i class="material-icons">dashboard</i>Review Cases</a>
             </li>
+             <li><a href="report.html"><i class="material-icons">report</i>Report Cases</a></li>
             <li>
                 <a href="settings.html"><i class="material-icons">settings</i>Settings</a>
             </li>
 
             <li><div class="divider"></div></li>
-            <li><a class="waves-effect" href="index.html">Logout</a></li>
+            <li><a onclick='logOut()' class="waves-effect"><i class="fas fa-sign-out-alt"></i>Logout</a></li>       
+            <li ><a href="#!"><img  src="images/onbod3.png"></a></li>
+            
+                  
         </ul>
         <a href="#" data-target="slide-out" class="black-text sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
 
@@ -174,6 +176,7 @@
                                 </label>
                                 <button class="btn btn-small" onclick="moveBackToCard1()">Back</button>
                                 <button class="btn btn-small" onclick="moveToCard3()">Continue</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -270,21 +273,14 @@
         <!-- Footer -->
         <footer class="page-footer">
             <div class="right footer-copyright">
-                <h6><span class="#01579b light-blue-text text-darken-4">PELARD</span></h6>
                 <div class="col l6 s12">
                     <ul>
-                        <li class="partners">
-                            <a class="white-text" href="#!"><img class="logos" src="images/EU.png" /></a>
-                        </li>
-                        <li class="partners">
-                            <a class="white-text" href="#!"><img class="logos" src="images/EU.png" /></a>
-                        </li>
-                        <li class="partners">
-                            <a class="white-text" href="#!"><img class="logos" src="images/EU.png" /></a>
-                        </li>
-                        <li class="partners">
-                            <a class="white-text" href="#!"><img class="logos" src="images/EU.png" /></a>
-                        </li>
+                       
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.png"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/sol.png"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/gwed.jpg"></a></li>
+            <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/hurifo.jpg"></a></li>
+          
                     </ul>
                 </div>
             </div>
@@ -292,17 +288,26 @@
         <!-- Footer -->
 
         <!-- Compiled and minified JavaScript -->
+        <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
         <script src="https://code.jquery.com/jquery-3.5.0.slim.min.js" integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+function logOut(){
+    sessionStorage.clear();
+    window.location = '/index.html';
+}
 
-        <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-       <script src="js/cardtoggle.js"></script>
-       <script src="js/report.js"></script>
+</script>
+
         <script>
             $(document).ready(function () {
                 $(".sidenav").sidenav();
                 $("select").formSelect();
             });
-      </script>
+        </script>
+<script src="js/report.js"></script>
+ <script src="js/cardtoggle.js"></script>
+       
+       
     </body>
 </html>
