@@ -40,8 +40,8 @@ const handleSubmit = async ({ files }) => {
     const response = await fetch(SERVER_URI, options);
     const json = await response.json();
     const { secure_url } = json;
-
-    console.log(`secure_url ${secure_url}`); // You send me this secure url
+     return secure_url;
+    //console.log(`secure_url ${secure_url}`); // You send me this secure url
   } catch (errors) {
     console.log(errors);
   }
