@@ -17,6 +17,7 @@ const resourcesToPrecache=[
 'js/recovery.js',
 'js/register.js',
 'js/report.js',
+'js/idb.js',
 'js/settings.js',
 'images/avatar-9.png',
 'images/EU.png',
@@ -25,8 +26,10 @@ const resourcesToPrecache=[
 'images/onbod1.png',
 'images/onbod2.png',
 'images/onbod3.png',
+'images/pelard.png',
 'images/sol.png'
 ];
+
 
 self.addEventListener('install',event =>{
     console.log('Service worker install event!');
@@ -38,8 +41,10 @@ self.addEventListener('install',event =>{
     );
 });
 
-self.addEventListener('activate',event =>{
-    console.log('SW Activated at');
+self.addEventListener('activate', function(event) {
+
+    console.log('sw activated');
+
 });
 
 self.addEventListener('fetch', event => {
