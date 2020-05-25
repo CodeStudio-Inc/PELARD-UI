@@ -26,7 +26,6 @@ const resourcesToPrecache=[
 'images/onbod1.png',
 'images/onbod2.png',
 'images/onbod3.png',
-'images/pelard.png',
 'images/sol.png'
 ];
 
