@@ -1,0 +1,24 @@
+{
+ 
+    "name": "PELARD-N",
+    "short_name": "PELARD-N",
+    "theme_color": "#01579b",
+    "background_color": "#f0f6fb",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/index.html",
+    "icons": [
+      {
+        "src": "favicon.ico",
+        "sizes": "48x48",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "./images/pelard.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ]
+   
+  }
+  
