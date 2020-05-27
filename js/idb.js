@@ -67,9 +67,16 @@ const otherWitness = document.getElementById("otherWitness").value;
         //
         // Then when data is stored, read from it
         //
-        return db.violations.get(reporterName);
+        if (location.pathname !== '/report') {
+            window.location = '/submitted.html';
+           
+          }
+          if (location.pathname === '/report'){
+            window.location ='/submitted.html';
+            
+          } 
     });
 
-    console.log(reporterName);
+   
 }
   }));
