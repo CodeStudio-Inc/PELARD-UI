@@ -62,7 +62,7 @@
        
     } catch (errors) {
       console.log(errors);
-      document.getElementById("login_failed").innerHTML = `wrong password or username`;
+       document.getElementById("login_failed").innerHTML = `wrong password or username, refresh and try again`;
     }
 
   
