@@ -59,7 +59,8 @@ const handleSubmit = async ({ files }) => {
 		 const violationType = document.getElementById("violationType").options[
                 document.getElementById("violationType").selectedIndex].text;
                 
-		const violationDescription = document.getElementById("violationDescription").value;
+    const violationDescription = document.getElementById("violationDescription").value;
+    const village = document.getElementById("village").value;
 		const injuries = document.getElementById("injuries").value;
 		const contactAuthority = document.getElementById("contactAuthority").value;
 	  const authorityResponse = document.getElementById("authorityResponse").value;
@@ -97,7 +98,7 @@ const response = await fetch(`${baseUrl}/violations/create`, {
             type: violationType,
             description: violationDescription,
             location: {
-              name:districtOfViolation,
+              name:village,
               district: districtOfViolation
               },
             
