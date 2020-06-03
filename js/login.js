@@ -15,7 +15,6 @@
     const json = await response.json();
     console.log(json);
      sessionStorage.setItem('access', json.data.token);
-     sessionStorage.setItem('userName', json.data.user.userName);
     return json.data.token;
   };
   
@@ -51,7 +50,8 @@
   
       const json = await response.json();
       console.log(json);
-  sessionStorage.setItem('_id', json.data.user._id)
+  sessionStorage.setItem('_id', json.data.user._id);
+  sessionStorage.setItem('userName', json.data.user.userName);
   if (!validLogin && location.pathname !== '/index') {
     window.location = '/report.html';
    
