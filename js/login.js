@@ -14,7 +14,8 @@
   
     const json = await response.json();
     console.log(json);
-     sessionStorage.setItem('access', json.data.token)
+     sessionStorage.setItem('access', json.data.token);
+     sessionStorage.setItem('userName', json.data.user.userName);
     return json.data.token;
   };
   
