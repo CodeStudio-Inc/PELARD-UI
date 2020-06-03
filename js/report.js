@@ -1,6 +1,7 @@
 const baseUrl = 'https://pelard-n.herokuapp.com';
   const secret = '2cfb9e9a-34a9-4843-961f-6e2639c41856-b10445eb-a0e8-4fa2-b636-015b2f1e3660';
-  const _id= sessionStorage.getItem('_id')
+  const _id= sessionStorage.getItem('_id');
+  
   
   const getToken = async ({ secret, _id }) => {
     const response = await fetch(`${baseUrl}/token/generate`, {
@@ -40,8 +41,8 @@ const handleSubmit = async ({ files }) => {
     const response = await fetch(SERVER_URI, options);
     const json = await response.json();
     const { secure_url } = json;
-     return secure_url;
-    //console.log(`secure_url ${secure_url}`); // You send me this secure url
+    return secure_url;
+   // console.log(`secure_url ${secure_url}`); // You send me this secure url
   } catch (errors) {
     console.log(errors);
   }
@@ -72,7 +73,8 @@ const handleSubmit = async ({ files }) => {
 		const otherWitness = document.getElementById("otherWitness").value;
   //Evidence     
 		const files = document.getElementById("img").files;
-		const fileDescription = document.getElementById("fileDescription").value;
+    const fileDescription = document.getElementById("fileDescription").value;
+    
     try {
       const token = await getToken({ secret, _id });
       const secure_url= await handleSubmit({ files });
@@ -95,8 +97,9 @@ const response = await fetch(`${baseUrl}/violations/create`, {
             type: violationType,
             description: violationDescription,
             location: {
-                name: districtOfViolation,
-            },
+              name:districtOfViolation,
+              district: districtOfViolation
+              },
             
             involved: [
                 { type: "victim", name: victimName,
@@ -128,7 +131,7 @@ const response = await fetch(`${baseUrl}/violations/create`, {
              injuries: [
               {
                 description: injuries,
-                link: secure_url
+                link:secure_url
               }
             ],
             authorityResponse:[
@@ -155,12 +158,11 @@ const response = await fetch(`${baseUrl}/violations/create`, {
       console.log(json);
   console.log('Case Documented');
   if (!validLogin && location.pathname !== '/report') window.location ='/submitted.html' ;
-if (validLogin && location.pathname === '/report') window.location ='/submitted.html';
+  if (validLogin && location.pathname === '/report') window.location ='/submitted.html';
        
     } catch (errors) {
       console.log(errors);
-      document.getElementById("report_failed").innerHTML = `<span style='font-size:40px'>please fill all the inputs</span>`
-      
+      document.getElementById("report_failed").innerHTML = `<span style='font-size:40px'>please fill all the inputs</span>`;
     }
 
   
