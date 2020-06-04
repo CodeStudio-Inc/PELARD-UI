@@ -155,7 +155,7 @@
                                   <textarea placeholder="" id="village" class=" materialize-textarea"></textarea>
                                 <label class="input-box ">Village/Home Town</label>
                                   </div>
-                                  
+
                                  <div class="input-field col s12">
                                  <select id="violationType">
                                         <option value="" disabled selected> Choose Type Of Violation</option>
@@ -346,7 +346,7 @@ function logOut(){
 <script src="js/report.js"></script>
  <script src="js/cardtoggle.js"></script>
         <script>
-
+window.addEventListener('online',  document.getElementById("offline").style.display = "none");
 function showUserName(){
  const userName= sessionStorage.getItem('userName');
  return document.getElementById("user").innerHTML =(`${userName}`);
