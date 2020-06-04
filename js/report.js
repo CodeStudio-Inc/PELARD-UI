@@ -75,6 +75,9 @@ const handleSubmit = async ({ files }) => {
   //Evidence     
 		const files = document.getElementById("img").files;
     const fileDescription = document.getElementById("fileDescription").value;
+
+    const loader =document.querySelector('div.progress');
+    loader.style.display = "block"
     
     try {
       const token = await getToken({ secret, _id });
