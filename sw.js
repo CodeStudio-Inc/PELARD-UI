@@ -20,7 +20,7 @@ const resourcesToPrecache=[
 'js/idb.js',
 'js/settings.js',
 'images/avatar-9.png',
-'images/EU.png',
+'images/EU.jpg',
 'images/gwed.jpg',
 'images/hurifo.jpg',
 'images/onbod1.png',
