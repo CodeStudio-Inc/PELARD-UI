@@ -617,3 +617,32 @@ margin-right: 5px;
 .slider-dots li.active-dot {
 color: #363636;
 }
+
+
+.sidenav.dark {
+  background-color: #151515;
+  color: rgba(255, 255, 255, 0.5);
+}
+.sidenav.dark .subheader {
+  color: rgba(255, 255, 255, 0.5);
+}
+.sidenav.dark .divider {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.sidenav.dark li a {
+  color: rgba(255, 255, 255, 0.5);
+}
+.sidenav.dark li a i.material-icons {
+  color: rgba(255, 255, 255, 0.5);
+}
+.fab{
+  color: rgba(255, 255, 255, 0.5);
+}
+nav, header, main, footer {
+  padding-left: 300px;
+}
+@media only screen and (max-width: 992px) {
+  nav, header, main, footer {
+    padding-left: 0;
+ }
+}
