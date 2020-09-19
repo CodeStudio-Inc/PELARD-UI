@@ -160,9 +160,15 @@ const response = await fetch(`${baseUrl}/violations/create`, {
   
       const json = await response.json();
       console.log(json);
-  console.log('Case Documented');
-  if (!validLogin && location.pathname !== '/report') window.location ='/submitted.html' ;
-  if (validLogin && location.pathname === '/report') window.location ='/submitted.html';
+  if (!validLogin && location.pathname !== '/report'){
+    window.location ='/submitted.html' ;
+    // console.log('Case Not Documented');
+    // document.getElementById("error").innerHTML = `<span style='font-size:40px; color:red;'>please fill all the inputs</span>`;
+  } 
+  if (validLogin && location.pathname === '/report'){
+    console.log('Case Documented');
+    window.location ='/submitted.html';
+  } 
        
     } catch (errors) {
       console.log(errors);
