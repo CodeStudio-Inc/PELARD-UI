@@ -172,7 +172,7 @@ const response = await fetch(`${baseUrl}/violations/create`, {
        
     } catch (errors) {
       console.log(errors);
-      document.getElementById("report_failed").innerHTML = `<span style='font-size:40px'>please fill all the inputs</span>`;
+      document.getElementById("report_failed").innerHTML = `<span style='font-size:40px'>some fields are not filled</span>`;
     }
 
   
