@@ -638,8 +638,12 @@ color: #363636;
 .fab{
   color: rgba(255, 255, 255, 0.5);
 }
-nav, header, main, footer {
+nav, header,footer {
   padding-left: 300px;
+}
+
+main{
+  padding-left: 200px;
 }
 @media only screen and (max-width: 992px) {
   nav, header, main, footer {
