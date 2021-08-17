@@ -160,19 +160,20 @@ const response = await fetch(`${baseUrl}/violations/create`, {
   
       const json = await response.json();
       console.log(json);
-  if (!validLogin && location.pathname !== '/report'){
-    window.location ='/submitted.html' ;
-    // console.log('Case Not Documented');
-    // document.getElementById("error").innerHTML = `<span style='font-size:40px; color:red;'>please fill all the inputs</span>`;
+  if (!validLogin && location.pathname !== '/pages/report'){
+    window.location ='/pages/submitted.html' ;
+    console.log('Case Not Documented');
+    document.getElementById("error").innerHTML = `<span style='font-size:40px; color:red;'>please fill all the inputs</span>`;
   } 
-  if (validLogin && location.pathname === '/report'){
+  if (validLogin && location.pathname === '/pages/report'){
     console.log('Case Documented');
-    window.location ='/submitted.html';
+    window.location ='/pages/submitted.html';
   } 
        
     } catch (errors) {
       console.log(errors);
       document.getElementById("report_failed").innerHTML = `<span style='font-size:40px'>some fields are not filled</span>`;
+      window.location ='/pages/report';
     }
 
   

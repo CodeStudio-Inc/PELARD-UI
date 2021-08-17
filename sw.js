@@ -5,7 +5,7 @@ const resourcesToPrecache=[
 '/',
 'index.html',
 'register.html',
-'report.html',
+'pages/report.html',
 'submitted.html',
 'forgot.html',
 'settings.html',

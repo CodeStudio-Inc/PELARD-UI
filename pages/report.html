@@ -6,7 +6,7 @@
         <meta name="description" content="Monitoring Documentation Reporting" />
         <meta name="keywords" content="Human Rights,Violation,Northern Uganda" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link href="./css/main.css" type="text/css" rel="stylesheet"/>
+        <link href="../css/main.css" type="text/css" rel="stylesheet"/>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Compiled and minified CSS -->
@@ -15,9 +15,11 @@
 	  
         <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/auth.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/auth.css" />
+        <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
+    
 
         <style>
           
@@ -25,8 +27,15 @@
           display: none;
       }
                footer {
-                   padding-left: 300px;
-                   opacity: 0.3;
+           
+                   opacity: 1;
+                   position: fixed;
+                padding: 10px 10px 0px 300px;
+                bottom: 0;
+                width: 100%;
+                /* Height of the footer*/ 
+                height: 40px;
+                background: grey;
                    
                }
    
@@ -62,6 +71,9 @@
 
     body{
       background-color: white;
+
+
+
     }
           .brand-logo{
           width:45px;
@@ -142,6 +154,10 @@
           <span class="icon"><i class="fas fa-leaf"></i></span>
           <span class="title">Issues</span></a></li>
 
+          <li><a href="https://www.report.pelard-n.org/">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="title">Home</span></a></li>
+
           <li><div class="divider"></div></li>
         <li><a onclick='logOut()' class="waves-effect">
           <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
@@ -180,7 +196,7 @@
                                     <div class="col s12 relative">
         
                                             <div class="input-field col s12">
-                                            <input placeholder="" id="reporterName" class="input" type="text"/>
+                                            <input placeholder="" id="reporterName" class="input" type="text" required/>
                                             <div class="input-invalid-message">Reporter's Name cannot be empty</div>
                                             <label class="input-box ">Name</label>
                                             </div>
@@ -188,12 +204,14 @@
                                        
                                            <div class="input-field col s12">
                                         <input placeholder="" id="reporterContact" class="input" type="tel" id="phone" required />
-                                         <small>Format: 7-000-0000</small>
+                                        <div class="input-invalid-message">Contact cannot be empty</div>
                                          <label class="input-box" for="phone">Contact Phone</label>
                                          </div>
         
                                           <div class="input-field col s12">
-                                            <input placeholder="" id="dateTime" type="date" class="datepicker" />
+                                        <div class="input-invalid-message">Contact cannot be empty</div>
+                                            <input placeholder="" id="dateTime" class="input" type="date" class="datepicker" required/>
+                                            <div class="input-invalid-message">Date And Time cannot be empty</div>
                                             <label class="input-box">Date And Time</label>
                                          </div>
         
@@ -241,37 +259,38 @@
                                          <div class="input-field col s12">
                                          <select id="violationType">
                                                 <option value="" disabled selected> Choose Type Of Violation</option>
-                                                <option value="1">Indecent assault</option>
+                                                <!-- <option value="1">Indecent assault</option>
                                                 <option value="2">Domestic Violance</option>
-                                                <option value="3">Attempted Murder</option>
+                                                <option value="3">Attempted Murder</option> -->
                                                 <option value="4">Destruction Of Property</option>
                                                 <option value="5">Harrassment</option>
                                                 <option value="6">Intimidation</option>
                                                 
-                                                <option value="7">Arbitrary arrests</option>
+                                                <!-- <option value="7">Arbitrary arrests</option>
                                                 <option value="8">Arbitrary detentions</option>
                                                 <option value="9">Detention beyond 48 hours</option>
                                                 <option value="10">Detention in ungazetted places</option>
                                                 <option value="11">Detention without trial</option>
-                                                <option value="12">Enforced disappearances</option>
+                                                <option value="12">Enforced disappearances</option> -->
         
-                                                <option value="13">Prolonged detention</option>
-                                                <option value="14">Torture or cruel, inhuman or degrading treatment or punishment</option>
+                                                <!-- <option value="13">Prolonged detention</option>
+                                                <option value="14">Torture or cruel, inhuman or degrading treatment or punishment</option> -->
                                                 <option value="15">Violation of right to privacy in unlawful entry by others of the premises of a person.</option>
                                                 <option value="16">Violation of right to privacy in unlawful search of the person, home or other personal</option>
-                                                <option value="17">Violation of the right to adequate time and facilities for preparation of defence</option>
-                                                <option value="18">Violation of the right to an effective remedy for human rights violations</option>
+                                                <!-- <option value="17">Violation of the right to adequate time and facilities for preparation of defence</option>
+                                                <option value="18">Violation of the right to an effective remedy for human rights violations</option> -->
                                                 
-                                                <option value="19">Violation of the right to appear in court in person or by a lawyer of choice</option>
-                                                <option value="20">Violation of the right to legal representation at the expense of the state in offences</option>
+                                                <!-- <option value="19">Violation of the right to appear in court in person or by a lawyer of choice</option> -->
+                                                <!-- <option value="20">Violation of the right to legal representation at the expense of the state in offences</option> -->
                                                 <option value="21">Violation of the right to own property</option>
-                                                <option value="22">Violations related to frivolous charges</option>
+                                                 <!-- <option value="22">Violations related to frivolous charges</option> -->
+                                                 <option value="22">Land Dispute</option>
                                             </select>
                                        <label class="input-box ">Violation</label>
                                         </div>
         
                                           <div class="input-field col s12">
-                                          <textarea placeholder="" id="violationDescription" class=" materialize-textarea"></textarea>
+                                          <textarea maxlength="100" placeholder="" id="violationDescription" class=" materialize-textarea"></textarea>
                                         <label class="input-box ">Describe The Violation</label>
                                           </div>
         
@@ -416,16 +435,13 @@
                     </div>
                  </li>
                 </ul>
-                <button id="create-group-button" class="btn btn-large strong-text right">
+                <button id="create-group-button" class="btn btn-large white-text right #4a148c purple darken-4">
                     SUBMIT
-                    <svg style="width: 24px; height: 24px; top: 6px; position: relative; right: 2px;" viewBox="0 0 24 24">
-                        <path fill="#ffffff" d="M5.59,7.41L7,6L13,12L7,18L5.59,16.59L10.17,12L5.59,7.41M11.59,7.41L13,6L19,12L13,18L11.59,16.59L16.17,12L11.59,7.41Z"></path>
-                    </svg>
                 </button>
                 <div class="progress">
         <div class="indeterminate"></div>
     </div>
-                     <a class="btn-small" id="offline"> <i class="material-icons">offline_pin</i></a>
+                     <!-- <a class="btn-small" id="offline"> <i class="material-icons">offline_pin</i></a> -->
             </div>
                      
         </div>
@@ -446,10 +462,10 @@
         <div class="col l6 s12">
             <ul>
                
-    <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/EU.jpg"></a></li>
-    <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/sol.png"></a></li>
-    <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/gwed.jpg"></a></li>
-    <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="images/hurifo.jpg"></a></li>
+    <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="../images/EU.jpg"></a></li>
+    <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="../images/sol.png"></a></li>
+    <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="../images/gwed.jpg"></a></li>
+    <li class="partners"><a class="white-text" href="#!"><img  class="logos" src="../images/hurifo.jpg"></a></li>
   
             </ul>
         </div>
@@ -481,10 +497,10 @@ window.location = '/index.html';
         });
     });
 </script>
-<script src="js/report.js"></script>
-<script src="js/cardtoggle.js"></script>
+<script src="../js/report.js"></script>
+<script src="../js/cardtoggle.js"></script>
 <script>
-window.addEventListener('online',  document.getElementById("offline").style.display = "none");
+// window.addEventListener('online',  document.getElementById("offline").style.display = "none");
 function showUserName(){
 const userName= sessionStorage.getItem('userName');
 return document.getElementById("user").innerHTML =(`${userName}`);

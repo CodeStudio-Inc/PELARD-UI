@@ -2189,14 +2189,14 @@ ul.staggered-list li {
     text-align: center; } }
 
 .page-footer {
-  padding-top: 20px;
+  padding-top: 0px;
   background-color: white; }
   .page-footer .footer-copyright {
     overflow: hidden;
-    min-height: 50px;
+    min-height: 10px;
     display: flex;
     align-items: center;
-    padding: 10px 0px;
+    padding: 0px 0px;
     color: rgba(255, 255, 255, 0.8);
     background-color: rgba(51, 51, 51, 0.08); }
 
@@ -6278,7 +6278,7 @@ button.btn-floating {
     width: 100%; }
     .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .pricing-button, .modal .modal-footer .button-collection > button, .modal .modal-footer .btn-flat {
       float: right;
-      margin: 6px 0; }
+      margin: 1px 0; }
 
 .modal-overlay {
   position: fixed;
@@ -8842,7 +8842,7 @@ nav ul a.btn.btn-hollow:hover, nav ul a.btn-hollow.btn-large:hover, nav ul a.btn
 footer.page-footer {
   z-index: 1010;
   background: #fbfbfb;
-  margin: 100px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
   padding: 0px;
   border-top: 1px solid #eee;
   bottom: 0px;

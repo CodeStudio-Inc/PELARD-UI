@@ -53,7 +53,7 @@
   sessionStorage.setItem('_id', json.data.user._id);
   sessionStorage.setItem('userName', json.data.user.userName);
   if (!validLogin && location.pathname !== '/index') {
-    window.location = '/report.html';
+    window.location = '/pages/report.html';
    
   }
   if (validLogin && location.pathname === '/index'){
