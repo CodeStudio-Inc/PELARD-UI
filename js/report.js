@@ -50,7 +50,6 @@ const handleSubmit = async ({ files }) => {
 
   const userReport = async () => {
      //Reporters Information
-     const gender = document.getElementById("gender").options;
 		const reporterName = document.getElementById("reporterName").value;
 		const reporterContact = document.getElementById("reporterContact").value;
 		const dateTime =document.getElementById('dateTime').value;
@@ -136,7 +135,7 @@ const response = await fetch(`${baseUrl}/violations/create`, {
              injuries: [
               {
                 description: injuries,
-                link:secure_url 
+                link:injuries 
               }
             ],
             authorityResponse:[
@@ -152,8 +151,8 @@ const response = await fetch(`${baseUrl}/violations/create`, {
             ],
             otherInfo: [
               {
-                description: "gender",
-                link:gender
+                description: "string",
+                link:secure_url
               }
             ]
         })
