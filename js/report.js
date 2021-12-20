@@ -169,11 +169,12 @@ const response = await fetch(`${baseUrl}/violations/create`, {
   if (!validLogin && location.pathname !== '/pages/report'){
     window.location ='/pages/submitted.html' ;
     console.log('Case Documented');
-    document.getElementById("error").innerHTML = `<span style='font-size:40px; color:red;'>please fill all the inputs</span>`;
+    
   } 
   if (validLogin && location.pathname === '/pages/report'){
     console.log('Case Not Documented');
     // window.location ='/pages/submitted.html';
+    document.getElementById("error").innerHTML = `<span style='font-size:40px; color:red;'>please fill all the inputs</span>`;
   } 
        
     } catch (errors) {
