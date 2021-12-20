@@ -100,6 +100,7 @@ const response = await fetch(`${baseUrl}/violations/create`, {
             dateTime: dateTime,
             type: violationType,
             description: violationDescription,
+            evidence:[secure_url],
             location: {
               name:village,
               district: districtOfViolation
@@ -135,7 +136,7 @@ const response = await fetch(`${baseUrl}/violations/create`, {
              injuries: [
               {
                 description: injuries,
-                link:injuries 
+                link:secure_url 
               }
             ],
             authorityResponse:[
