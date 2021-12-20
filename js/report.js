@@ -56,6 +56,10 @@ const handleSubmit = async ({ files }) => {
   //Violation Details
 		const districtOfViolation = document.getElementById("districtOfViolation").options[
 							  document.getElementById("districtOfViolation").selectedIndex].text;
+
+ const gender = document.getElementById("gender").options[
+                  document.getElementById("gender").selectedIndex].text;
+
 		 const violationType = document.getElementById("violationType").options[
                 document.getElementById("violationType").selectedIndex].text;
                 
@@ -100,7 +104,6 @@ const response = await fetch(`${baseUrl}/violations/create`, {
             dateTime: dateTime,
             type: violationType,
             description: violationDescription,
-            evidence:[secure_url],
             location: {
               name:village,
               district: districtOfViolation
@@ -111,7 +114,7 @@ const response = await fetch(`${baseUrl}/violations/create`, {
                 relevantLinks:[
                 { 
                   description:otherVictim,
-                  link:'string'
+                  link:gender
                   }
                 ] 
                 },
@@ -120,7 +123,7 @@ const response = await fetch(`${baseUrl}/violations/create`, {
                 relevantLinks:[
                 { 
                   description:otherSuspect,
-                  link:'string'
+                  link:gender
                   }
                 ] 
                  },
@@ -128,7 +131,7 @@ const response = await fetch(`${baseUrl}/violations/create`, {
                 relevantLinks:[
                 { 
                   description:otherWitness,
-                  link:'string'
+                  link:gender
                   }
                 ] 
                  },
@@ -150,12 +153,14 @@ const response = await fetch(`${baseUrl}/violations/create`, {
                  },
                
             ],
+          
             otherInfo: [
               {
-                description: "string",
+                description: gender,
                 link:secure_url
               }
             ]
+           
         })
     });
   
@@ -163,12 +168,12 @@ const response = await fetch(`${baseUrl}/violations/create`, {
       console.log(json);
   if (!validLogin && location.pathname !== '/pages/report'){
     window.location ='/pages/submitted.html' ;
-    console.log('Case Not Documented');
+    console.log('Case Documented');
     document.getElementById("error").innerHTML = `<span style='font-size:40px; color:red;'>please fill all the inputs</span>`;
   } 
   if (validLogin && location.pathname === '/pages/report'){
-    console.log('Case Documented');
-    window.location ='/pages/submitted.html';
+    console.log('Case Not Documented');
+    // window.location ='/pages/submitted.html';
   } 
        
     } catch (errors) {
